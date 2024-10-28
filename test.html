@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Synthesis Test</title>
+</head>
+<body>
+    <button onclick="speak('Hello, this is a test')">Speak</button>
+    <script>
+        function speak(text) {
+            let text_speak = new SpeechSynthesisUtterance(text);
+            text_speak.rate = 1;
+            text_speak.pitch = 1;
+            text_speak.volume = 1;
+            text_speak.lang = "en-US";
+            window.speechSynthesis.speak(text_speak);
+        }
+    </script>
+</body>
+</html>
